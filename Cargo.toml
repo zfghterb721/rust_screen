@@ -1,0 +1,43 @@
+[package]
+name = "display_rtsp_streamer"
+version = "0.1.0"
+edition = "2021"
+authors = ["Claude"]
+description = "Windows screen capture to RTSP streamer for security cameras"
+
+[dependencies]
+# Screen capture
+scrap = "0.5"           # Cross-platform screen capture
+display-info = "0.4.0"  # Display enumeration
+
+# Video encoding and streaming
+gstreamer = "0.20.0"    # Media framework for streaming
+gstreamer-app = "0.20.0"
+gstreamer-video = "0.20.0"
+gstreamer-rtsp-server = "0.20.0"
+
+# Windows service
+windows-service = "0.5.0"
+
+# Utilities
+clap = { version = "4.0", features = ["derive"] } # Command line argument parsing
+log = "0.4"
+env_logger = "0.10"
+anyhow = "1.0"          # Error handling
+toml = "0.7"            # Config file parsing
+serde = { version = "1.0", features = ["derive"] }
+dirs = "5.0"            # Finding config directories
+ctrlc = "3.4"           # Handling Ctrl+C
+local-ip-address = "0.5.3" # Get local IP address
+glib = "0.17.0"         # Required for GStreamer main loop
+once_cell = "1.18.0"    # For GStreamer initialization
+
+[target.'cfg(windows)'.dependencies]
+winreg = "0.10"         # Registry operations for install/uninstall
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

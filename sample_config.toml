@@ -1,0 +1,27 @@
+# Display RTSP Streamer Configuration
+
+# IP address to advertise in RTSP URLs (defaults to local IP)
+# Leave empty to automatically detect
+server_address = ""
+
+# Port for the RTSP server
+rtsp_port = 8554
+
+# Frames per second to capture and stream
+# Higher values = smoother video but more CPU and network usage
+# Recommended: 10-15 for security monitoring
+frame_rate = 15
+
+# Video quality (0-10, higher is better quality but more bandwidth)
+# 0 = lowest quality, highest compression
+# 10 = highest quality, lowest compression
+# Recommended: 7 for a good balance
+quality = 7
+
+# Whether to capture cursor in the screen capture
+capture_cursor = true
+
+# List of display indices to capture (empty = all displays)
+# Example: To only capture the first and third displays:
+# displays = [0, 2]
+displays = []

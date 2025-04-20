@@ -1,0 +1,18 @@
+GStreamer 1.20 or newer is required for this application to function.
+
+Required GStreamer plugins:
+- GStreamer Core Runtime
+- Base Plugins
+- Good Plugins 
+- X264 encoder
+- RTSP Server
+
+To install GStreamer:
+1. Download the GStreamer Runtime installer (MinGW 64-bit) from:
+   https://gstreamer.freedesktop.org/download/
+
+2. Run the installer and select "Complete" installation to ensure
+   all required plugins are installed.
+
+3. Make sure the GStreamer bin directory is in your system PATH:
+   C:\Program Files\GStreamer\1.0\mingw_x86_64\bin

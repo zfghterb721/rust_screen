@@ -1,0 +1,24 @@
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Build outputs
+*.exe
+*.dll
+*.so
+*.dylib
+*.pdb
+compile.log
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Application specific
+*.log
